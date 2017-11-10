@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Carré</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            // fonction qui retourne la différence entre la somme des carrés de 1 à x et le carré de la somme des nombres de 1 à x
+            function squareDifference(end) {
+                var sumSquares = sumSquares(end);
+                var squaresSum = squaresSum(end);
+                var difference = squaresSum - sumSquares;
+                return difference;
+                
+                function sumSquares(end) {
+                var sum = 0;
+                for (var i = 1; i <= end; i ++) {
+                    sum += i*i;
+                }
+                return sum;
+                }
+
+                function squaresSum(end) {
+                    var sum = 0;
+                    for (var i = 1; i <= end; i ++) {
+                        sum += i;
+                    }
+                    var square = sum*sum
+                    return square;
+                }
+            }
+            
+            
+            
+            console.log(squareDifference(100));
+        </script>
+    </body>
+</html>
